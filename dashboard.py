@@ -378,8 +378,7 @@ with tab1:
         fig = px.pie(filtered, names="Inspection results", hole=0.62,
                      color="Inspection results",
                      color_discrete_map={"Pass":"#10b981","Fail":"#ef4444","Pending":"#f59e0b"})
-        fig.update_layout(**cl(220), showlegend=True,
-                          legend=dict(orientation="h", y=-0.1, font=dict(size=10)))
+        fig.update_layout(**cl(220), showlegend=True)
         fig.update_traces(textfont_size=10, textfont_color="white")
         st.plotly_chart(fig, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
